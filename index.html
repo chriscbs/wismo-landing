@@ -534,20 +534,20 @@
         <div class="thumbnails">
           <div class="thumb" onclick="openLightbox(0)">
             <div class="thumb-inner">
-              <span class="thumb-text">WISMO impact analysis</span>
-              <img src="images/analysis.png" alt="Wismo dashboard showing impact analysis" class="thumb-img">
+              <span class="thumb-text">Free savings analysis</span>
+              <img src="images/wismo-roi.png" alt="Wismo dashboard showing savings analysis" class="thumb-img">
             </div>
           </div>
           <div class="thumb" onclick="openLightbox(1)">
             <div class="thumb-inner">
               <span class="thumb-text">Email preview + settings</span>
-              <img src="images/email_setup.png" alt="Wismo email setup" class="thumb-img">
+              <img src="images/wismo-settings.png" alt="Wismo settings" class="thumb-img">
             </div>
           </div>
           <div class="thumb" onclick="openLightbox(2)">
             <div class="thumb-inner">
-              <span class="thumb-text">Live impact dashboard</span>
-              <img src="images/recent_performance.png" alt="Wismo live dashboard" class="thumb-img">
+              <span class="thumb-text">Live activity feed</span>
+              <img src="images/wismo-activity.png" alt="Wismo live activity feed" class="thumb-img">
             </div>
           </div>
         </div>
@@ -661,7 +661,7 @@
     <button class="lightbox-nav lightbox-prev" onclick="prevImage()">&lsaquo;</button>
     <button class="lightbox-nav lightbox-next" onclick="nextImage()">&rsaquo;</button>
     <img src="" alt="" id="lightbox-img">
-    <div class="lightbox-counter"><span id="current">1</span> / <span id="total">6</span></div>
+    <div class="lightbox-counter"><span id="current">1</span> / <span id="total">3</span></div>
   </div>
 
   <!-- Footer -->
@@ -686,12 +686,9 @@
 
   <script>
     const images = [
-      { src: 'images/analysis.png', alt: 'Wismo dashboard showing WISMO impact analysis' },
-      { src: 'images/email_setup.png', alt: 'Wismo email preview and settings' },
-      { src: 'images/recent_performance.png', alt: 'Wismo live impact dashboard' },
-      { src: 'images/mobile_analysis.png', alt: 'Wismo mobile view showing impact analysis' },
-      { src: 'images/mobile_email_steup.png', alt: 'Wismo mobile email setup' },
-      { src: 'images/mobile_performance.png', alt: 'Wismo mobile dashboard' }
+      { src: 'images/wismo-roi.png', alt: 'Wismo dashboard showing free savings analysis' },
+      { src: 'images/wismo-settings.png', alt: 'Wismo settings' },
+      { src: 'images/wismo-activity.png', alt: 'Wismo live activity feed' }
     ];
     let currentIndex = 0;
     const lightbox = document.getElementById('lightbox');
