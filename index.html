@@ -38,413 +38,262 @@
       font-size: 14px;
     }
 
-    /* Header */
-    .header {
-      border-bottom: 1px solid #e1e1e1;
-      padding: 16px 24px;
-    }
-
-    .header-inner {
+    /* Main Layout */
+    .app-page {
+      display: flex;
       max-width: 1200px;
       margin: 0 auto;
+      padding: 32px 24px;
+      gap: 48px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 280px;
+      flex-shrink: 0;
+    }
+
+    .sidebar-inner {
+      position: sticky;
+      top: 24px;
+    }
+
+    .app-info {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
     }
 
-    .header-logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-      color: #1a1a1a;
+    .app-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 8px;
+      border: 1px solid #e1e1e1;
     }
 
-    .header-logo img {
-      width: 32px;
-      height: 32px;
-      border-radius: 6px;
-    }
-
-    .header-logo span {
+    .app-name {
       font-size: 18px;
       font-weight: 600;
+      line-height: 1.3;
+      margin-bottom: 4px;
     }
 
-    .header-nav {
-      display: flex;
+    .built-for-shopify {
+      display: inline-flex;
       align-items: center;
-      gap: 32px;
-    }
-
-    .header-nav a {
-      color: #616161;
-      text-decoration: none;
-      font-size: 14px;
+      gap: 4px;
+      font-size: 12px;
+      color: #5c6ac4;
       font-weight: 500;
     }
 
-    .header-nav a:hover {
-      color: #1a1a1a;
+    .built-for-shopify svg {
+      width: 14px;
+      height: 14px;
     }
 
-    .header-btn {
-      display: inline-block;
-      padding: 10px 20px;
+    .sidebar-divider {
+      height: 1px;
+      background: #e1e1e1;
+      margin: 16px 0;
+    }
+
+    .sidebar-row {
+      margin-bottom: 16px;
+    }
+
+    .sidebar-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 2px;
+    }
+
+    .sidebar-value {
+      font-size: 14px;
+      color: #616161;
+    }
+
+    .install-btn {
+      display: block;
+      width: 100%;
+      padding: 12px 24px;
       background: #1a1a1a;
       color: #fff;
       font-size: 14px;
       font-weight: 600;
+      text-align: center;
       text-decoration: none;
       border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      margin-top: 24px;
       transition: background 0.15s;
     }
 
-    .header-btn:hover {
+    .install-btn:hover {
       background: #333;
     }
 
-    /* Hero */
-    .hero {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 64px 24px;
-      text-align: center;
+    /* Main Content */
+    .main {
+      flex: 1;
+      min-width: 0;
     }
 
-    .hero h1 {
-      font-size: 36px;
-      font-weight: 700;
-      line-height: 1.25;
-      margin-bottom: 24px;
-      color: #1a1a1a;
-    }
-
-    .hero-subhead {
-      font-size: 18px;
-      color: #616161;
-      line-height: 1.6;
-      margin-bottom: 32px;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .hero-bullets {
+    /* Media Section */
+    .media-section {
       display: flex;
-      justify-content: center;
-      gap: 32px;
-      margin-bottom: 40px;
-      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 32px;
     }
 
-    .hero-bullets li {
+    .video-wrapper {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .video-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      background: #000;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .thumbnails {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      width: 180px;
+      flex-shrink: 0;
+    }
+
+    .thumb {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      cursor: pointer;
+      background: #f6f6f7;
+      border: 1px solid #e1e1e1;
+      transition: border-color 0.15s;
+    }
+
+    .thumb:hover {
+      border-color: #1a1a1a;
+    }
+
+    .thumb-inner {
       display: flex;
       align-items: center;
       gap: 8px;
-      font-size: 14px;
+      padding: 8px;
+    }
+
+    .thumb-text {
+      font-size: 11px;
       color: #616161;
+      line-height: 1.3;
+      flex: 1;
     }
 
-    .hero-bullets li::before {
+    .thumb-img {
+      width: 60px;
+      height: 45px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+    .thumb.has-more .thumb-inner::after {
       content: '';
-      width: 20px;
-      height: 20px;
-      background: #10b981;
-      border-radius: 50%;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z'/%3E%3C/svg%3E");
-      background-size: 14px;
-      background-repeat: no-repeat;
-      background-position: center;
-      flex-shrink: 0;
+      position: absolute;
+      inset: 0;
+      background: rgba(255,255,255,0.7);
     }
 
-    .hero-cta {
-      display: inline-block;
-      padding: 16px 32px;
-      background: #1a1a1a;
-      color: #fff;
-      font-size: 16px;
-      font-weight: 600;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: background 0.15s;
-    }
-
-    .hero-cta:hover {
-      background: #333;
-    }
-
-    .hero-trust {
-      margin-top: 16px;
-      font-size: 13px;
-      color: #9ca3af;
-    }
-
-    /* Section */
-    .section {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 64px 24px;
-    }
-
-    .section-alt {
-      background: #f9fafb;
-    }
-
-    .section-title {
-      font-size: 28px;
-      font-weight: 700;
-      text-align: center;
-      margin-bottom: 48px;
-      color: #1a1a1a;
-    }
-
-    /* How it works */
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
-    }
-
-    .step {
-      text-align: center;
-      padding: 32px 24px;
-    }
-
-    .step-number {
-      width: 48px;
-      height: 48px;
-      background: #1a1a1a;
-      color: #fff;
-      border-radius: 50%;
+    .more-label {
+      position: absolute;
+      inset: 0;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 20px;
-      font-weight: 700;
-      margin: 0 auto 20px;
-    }
-
-    .step h3 {
-      font-size: 18px;
+      font-size: 13px;
       font-weight: 600;
-      margin-bottom: 12px;
       color: #1a1a1a;
+      z-index: 1;
     }
 
-    .step p {
-      font-size: 14px;
-      color: #616161;
-      line-height: 1.6;
+    /* Content Sections */
+    .content-section {
+      margin-bottom: 24px;
     }
 
-    /* Feature cards */
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    .card {
-      background: #fff;
-      border: 1px solid #e1e1e1;
-      border-radius: 12px;
-      padding: 32px 24px;
-    }
-
-    .card h3 {
+    .content-section h2 {
       font-size: 16px;
       font-weight: 600;
       margin-bottom: 12px;
       color: #1a1a1a;
     }
 
-    .card p {
+    .content-section h3 {
       font-size: 14px;
-      color: #616161;
-      line-height: 1.6;
-    }
-
-    /* Screenshots */
-    .screenshots {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-    }
-
-    .screenshot {
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid #e1e1e1;
-      cursor: pointer;
-      transition: transform 0.15s, box-shadow 0.15s;
-    }
-
-    .screenshot:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.1);
-    }
-
-    .screenshot img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    /* Differentiation */
-    .diff-section {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .diff-section h2 {
-      font-size: 28px;
-      font-weight: 700;
-      margin-bottom: 24px;
+      font-weight: 600;
+      margin-bottom: 8px;
       color: #1a1a1a;
     }
 
-    .diff-bullets {
-      list-style: none;
-      margin-bottom: 24px;
+    .content-section p {
+      font-size: 14px;
+      color: #616161;
+      margin-bottom: 12px;
+      line-height: 1.6;
     }
 
-    .diff-bullets li {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      font-size: 16px;
+    .content-section ul {
+      list-style: disc;
+      padding-left: 20px;
+      margin-bottom: 12px;
+    }
+
+    .content-section li {
+      font-size: 14px;
       color: #616161;
-      margin-bottom: 16px;
+      margin-bottom: 6px;
       line-height: 1.5;
     }
 
-    .diff-bullets li::before {
-      content: '';
-      width: 8px;
-      height: 8px;
-      background: #1a1a1a;
-      border-radius: 50%;
-      flex-shrink: 0;
-      margin-top: 8px;
-    }
-
-    .diff-oneliner {
-      font-size: 16px;
-      color: #1a1a1a;
-      font-weight: 500;
-      padding: 20px 24px;
-      background: #f3f4f6;
-      border-radius: 8px;
-      border-left: 4px solid #1a1a1a;
-    }
-
-    /* Pricing */
-    .pricing-content {
-      max-width: 600px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .pricing-content p {
-      font-size: 16px;
-      color: #616161;
-      line-height: 1.6;
-      margin-bottom: 16px;
-    }
-
-    .pricing-cta {
-      margin-top: 32px;
+    .content-divider {
+      height: 1px;
+      background: #e1e1e1;
+      margin: 24px 0;
     }
 
     /* FAQ */
-    .faq-list {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
     .faq-item {
-      border-bottom: 1px solid #e1e1e1;
-      padding: 24px 0;
-    }
-
-    .faq-item:first-child {
-      border-top: 1px solid #e1e1e1;
+      margin-bottom: 16px;
     }
 
     .faq-question {
-      font-size: 16px;
+      font-size: 14px;
       font-weight: 600;
       color: #1a1a1a;
-      margin-bottom: 12px;
+      margin-bottom: 4px;
     }
 
     .faq-answer {
       font-size: 14px;
       color: #616161;
-      line-height: 1.6;
-    }
-
-    /* Footer */
-    .footer {
-      background: #1a1a1a;
-      color: #fff;
-      padding: 48px 24px;
-      margin-top: 64px;
-    }
-
-    .footer-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      gap: 32px;
-    }
-
-    .footer-brand {
-      font-size: 14px;
-    }
-
-    .footer-brand strong {
-      display: block;
-      font-size: 18px;
-      margin-bottom: 8px;
-    }
-
-    .footer-brand span {
-      color: rgba(255,255,255,0.6);
-      font-size: 13px;
-      display: block;
       line-height: 1.5;
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 24px;
-      flex-wrap: wrap;
-    }
-
-    .footer-links a {
-      color: rgba(255,255,255,0.6);
-      text-decoration: none;
-      font-size: 13px;
-    }
-
-    .footer-links a:hover {
-      color: #fff;
-    }
-
-    .footer-disclaimer {
-      width: 100%;
-      text-align: center;
-      margin-top: 32px;
-      padding-top: 24px;
-      border-top: 1px solid rgba(255,255,255,0.1);
-      font-size: 12px;
-      color: rgba(255,255,255,0.4);
     }
 
     /* Lightbox */
@@ -526,217 +375,285 @@
       font-size: 13px;
     }
 
+    /* Footer */
+    .footer {
+      background: #1a1a1a;
+      color: #fff;
+      padding: 32px 24px;
+      margin-top: 48px;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-brand {
+      font-size: 14px;
+    }
+
+    .footer-brand strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .footer-brand span {
+      color: rgba(255,255,255,0.6);
+      font-size: 13px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer-links a {
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    .footer-links a:hover {
+      color: #fff;
+    }
+
+    .footer-disclaimer {
+      width: 100%;
+      text-align: center;
+      margin-top: 24px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+    }
+
     /* Responsive */
     @media (max-width: 900px) {
-      .hero h1 {
-        font-size: 28px;
+      .app-page {
+        flex-direction: column;
+        gap: 24px;
       }
 
-      .steps,
-      .cards {
-        grid-template-columns: 1fr;
+      .sidebar {
+        width: 100%;
       }
 
-      .screenshots {
-        grid-template-columns: 1fr;
+      .sidebar-inner {
+        position: static;
       }
 
-      .header-nav {
-        display: none;
+      .media-section {
+        flex-direction: column;
+      }
+
+      .thumbnails {
+        width: 100%;
+        flex-direction: row;
+        overflow-x: auto;
+      }
+
+      .thumb {
+        width: 160px;
+        flex-shrink: 0;
       }
     }
 
     @media (max-width: 600px) {
-      .hero {
-        padding: 40px 16px;
-      }
-
-      .hero-bullets {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-        padding-left: 24px;
-      }
-
-      .section {
-        padding: 48px 16px;
+      .app-page {
+        padding: 16px;
       }
 
       .footer-inner {
         flex-direction: column;
+        gap: 16px;
         text-align: center;
-      }
-
-      .footer-links {
-        justify-content: center;
       }
     }
   </style>
 </head>
 <body>
-  <!-- Header -->
-  <header class="header">
-    <div class="header-inner">
-      <a href="/" class="header-logo">
-        <img src="images/app_icon.png" alt="Wismo">
-        <span>Wismo</span>
-      </a>
-      <nav class="header-nav">
-        <a href="#how-it-works">How it works</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#faq">FAQ</a>
-        <a href="https://apps.shopify.com/where-is-my-order" class="header-btn" data-cta-location="header">View on the Shopify App Store</a>
-      </nav>
-    </div>
-  </header>
+  <div class="app-page">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-inner">
+        <div class="app-info">
+          <img src="images/app_icon.png" alt="Wismo" class="app-icon">
+          <div>
+            <div class="app-name">Wismo</div>
+            <span class="built-for-shopify">
+              <svg viewBox="0 0 24 24" fill="#5c6ac4"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              Built for Shopify
+            </span>
+          </div>
+        </div>
 
-  <!-- Hero -->
-  <section class="hero">
-    <h1>Customers don't contact support because tracking updated. They contact support because nothing is happening.</h1>
-    <p class="hero-subhead">Wismo is a Shopify app that detects silent or confusing shipping moments and reassures customers automatically—so you get fewer "Where is my order?" tickets without hiring more support.</p>
-    <ul class="hero-bullets">
-      <li>Exception-only emails (no spam, one per exception per order)</li>
-      <li>Works alongside your existing tracking/status page app</li>
-      <li>Install in minutes (no complex integration)</li>
-    </ul>
-    <a href="https://apps.shopify.com/where-is-my-order" class="hero-cta" data-cta-location="hero">View on the Shopify App Store</a>
-    <p class="hero-trust">Built for Shopify &bull; Free trial &bull; Cancel anytime</p>
-  </section>
+        <div class="sidebar-divider"></div>
 
-  <!-- How it works -->
-  <section class="section section-alt" id="how-it-works">
-    <h2 class="section-title">How it works</h2>
-    <div class="steps">
-      <div class="step">
-        <div class="step-number">1</div>
-        <h3>Analyze your last 90 days</h3>
+        <div class="sidebar-row">
+          <div class="sidebar-label">Pricing</div>
+          <div class="sidebar-value">Free WISMO impact analysis</div>
+          <div class="sidebar-value" style="margin-top: 4px;">Free trial included</div>
+          <div class="sidebar-value" style="margin-top: 4px;">Paid plans scale with order volume</div>
+        </div>
+
+        <div class="sidebar-divider"></div>
+
+        <div class="sidebar-row">
+          <div class="sidebar-label">Built for</div>
+          <div class="sidebar-value">Shopify stores with shipping</div>
+        </div>
+
+        <div class="sidebar-divider"></div>
+
+        <div class="sidebar-row">
+          <div class="sidebar-label">Developer</div>
+          <div class="sidebar-value">Drumbeat Labs</div>
+        </div>
+
+        <a href="https://apps.shopify.com/where-is-my-order" class="install-btn" data-cta-location="sidebar">View on the Shopify App Store</a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+      <!-- Media Section -->
+      <div class="media-section">
+        <div class="video-wrapper">
+          <div class="video-container">
+            <iframe
+              src="https://www.youtube.com/embed/oW86TLWXOPs"
+              title="Wismo Demo"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <div class="thumbnails">
+          <div class="thumb" onclick="openLightbox(0)">
+            <div class="thumb-inner">
+              <span class="thumb-text">WISMO impact analysis</span>
+              <img src="images/analysis.png" alt="Wismo dashboard showing impact analysis" class="thumb-img">
+            </div>
+          </div>
+          <div class="thumb" onclick="openLightbox(1)">
+            <div class="thumb-inner">
+              <span class="thumb-text">Email preview + settings</span>
+              <img src="images/email_setup.png" alt="Wismo email setup" class="thumb-img">
+            </div>
+          </div>
+          <div class="thumb" onclick="openLightbox(2)">
+            <div class="thumb-inner">
+              <span class="thumb-text">Live impact dashboard</span>
+              <img src="images/recent_performance.png" alt="Wismo live dashboard" class="thumb-img">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="content-section">
+        <h2>Customers don't contact support because tracking updated. They contact support because nothing is happening.</h2>
+        <p>Wismo is a Shopify app that detects silent or confusing shipping moments and reassures customers automatically—so you get fewer "Where is my order?" tickets without hiring more support.</p>
+        <ul>
+          <li>Exception-only emails (no spam, one per exception per order)</li>
+          <li>Works alongside your existing tracking/status page app</li>
+          <li>Install in minutes (no complex integration)</li>
+        </ul>
+      </div>
+
+      <div class="content-divider"></div>
+
+      <div class="content-section">
+        <h2>How it works</h2>
+
+        <h3>1. Analyze your last 90 days</h3>
         <p>Wismo scans recent fulfillment and shipment activity to find the moments when customers typically get confused and reach out.</p>
-      </div>
-      <div class="step">
-        <div class="step-number">2</div>
-        <h3>Detect anxiety moments</h3>
+
+        <h3>2. Detect anxiety moments</h3>
         <p>We flag the highest-anxiety states: no scan after fulfillment, stalled movement, carrier exceptions, and post-delivery risk windows.</p>
-      </div>
-      <div class="step">
-        <div class="step-number">3</div>
-        <h3>Reassure automatically</h3>
+
+        <h3>3. Reassure automatically (when enabled)</h3>
         <p>When customer messaging is enabled, Wismo sends plain-language reassurance—only when needed—so support doesn't become the default.</p>
-      </div>
-    </div>
-  </section>
 
-  <!-- Features -->
-  <section class="section">
-    <h2 class="section-title">What you get</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Free WISMO impact analysis</h3>
-        <p>See how many orders hit silent shipping moments and estimate support cost over the last 90 days.</p>
+        <p style="margin-top: 16px;"><strong>You'll get a free WISMO impact analysis immediately after install</strong>—see how many orders hit silent shipping moments and estimate support cost over the last 90 days.</p>
+        <img src="images/analysis-slice.png" alt="Wismo impact analysis showing detected exceptions" style="width: 100%; border-radius: 8px; border: 1px solid #e1e1e1; margin-top: 12px;">
       </div>
-      <div class="card">
-        <h3>Email preview + test mode</h3>
-        <p>Preview the exact reassurance email and send a test before enabling customer messaging.</p>
-      </div>
-      <div class="card">
-        <h3>Live impact dashboard</h3>
-        <p>Track detected exceptions, emails sent, and estimated tickets prevented in real time.</p>
-      </div>
-    </div>
-  </section>
 
-  <!-- Screenshots -->
-  <section class="section section-alt">
-    <h2 class="section-title">See it in action</h2>
-    <div class="screenshots">
-      <div class="screenshot" onclick="openLightbox(0)">
-        <img src="images/analysis.png" alt="Wismo dashboard showing WISMO impact analysis">
-      </div>
-      <div class="screenshot" onclick="openLightbox(1)">
-        <img src="images/recent_performance.png" alt="Wismo dashboard showing live impact and recent activity">
-      </div>
-      <div class="screenshot" onclick="openLightbox(2)">
-        <img src="images/email_setup.png" alt="Wismo dashboard showing email preview and settings">
-      </div>
-      <div class="screenshot" onclick="openLightbox(3)">
-        <img src="images/mobile_analysis.png" alt="Wismo mobile view showing WISMO impact analysis">
-      </div>
-    </div>
-  </section>
+      <div class="content-divider"></div>
 
-  <!-- Differentiation -->
-  <section class="section">
-    <div class="diff-section">
-      <h2>This doesn't replace your tracking app.</h2>
-      <ul class="diff-bullets">
-        <li>Tracking apps show status when customers check.</li>
-        <li>Wismo only messages when shipping goes quiet or confusing.</li>
-        <li>No overlap: exception-only, hard-capped per order.</li>
-      </ul>
-      <p class="diff-oneliner">Keep your current tracking/status page—Wismo reduces the tickets that tracking pages don't prevent.</p>
-    </div>
-  </section>
+      <div class="content-section">
+        <h2>This doesn't replace your tracking app</h2>
+        <ul>
+          <li>Tracking apps show status when customers check</li>
+          <li>Wismo only messages when shipping goes quiet or confusing</li>
+          <li>No overlap: exception-only, hard-capped per order</li>
+        </ul>
+        <p><strong>Keep your current tracking/status page—Wismo reduces the tickets that tracking pages don't prevent.</strong></p>
+      </div>
 
-  <!-- Pricing -->
-  <section class="section section-alt" id="pricing">
-    <h2 class="section-title">Simple pricing that scales with your store.</h2>
-    <div class="pricing-content">
-      <p>Start with a free trial. Paid plans begin after your trial ends.</p>
-      <p>Plans include an order limit so costs stay predictable.</p>
-      <div class="pricing-cta">
-        <a href="https://apps.shopify.com/where-is-my-order" class="hero-cta" data-cta-location="pricing">View on the Shopify App Store</a>
-      </div>
-    </div>
-  </section>
+      <div class="content-divider"></div>
 
-  <!-- FAQ -->
-  <section class="section" id="faq">
-    <h2 class="section-title">Frequently asked questions</h2>
-    <div class="faq-list">
-      <div class="faq-item">
-        <div class="faq-question">Does Wismo replace my tracking/status page app?</div>
-        <div class="faq-answer">No—Wismo works alongside it and only emails customers during exceptions.</div>
+      <div class="content-section">
+        <h2>What you'll get</h2>
+        <ul>
+          <li><strong>Free WISMO impact analysis</strong> — See how many orders hit silent shipping moments and estimate support cost over the last 90 days</li>
+          <li><strong>Email preview + test mode</strong> — Preview the exact reassurance email and send a test before enabling customer messaging</li>
+          <li><strong>Live impact dashboard</strong> — Track detected exceptions, emails sent, and estimated tickets prevented in real time</li>
+        </ul>
       </div>
-      <div class="faq-item">
-        <div class="faq-question">When does Wismo email customers?</div>
-        <div class="faq-answer">Only when an exception is detected (no scan, stalled movement, carrier exception, etc.) and messaging is enabled.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question">Can I preview emails before enabling?</div>
-        <div class="faq-answer">Yes—preview and send a test email in the app.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question">Will it spam customers?</div>
-        <div class="faq-answer">No—hard capped to one message per exception per order.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question">What carriers does it support?</div>
-        <div class="faq-answer">It uses Shopify fulfillment shipment status updates; if your setup doesn't provide shipment status, Wismo will tell you.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question">How long does setup take?</div>
-        <div class="faq-answer">Minutes—install, review your impact analysis, test, then enable.</div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <strong>Wismo</strong>
-        <span>Reduce "Where is my order?" support tickets<br>by reassuring customers during shipping silence.</span>
+      <div class="content-divider"></div>
+
+      <div class="content-section">
+        <h2>Simple pricing that scales with your store</h2>
+        <p>Start with a free trial. Paid plans begin after your trial ends.</p>
+        <p>Plans include an order limit so costs stay predictable.</p>
+        <div style="margin-top: 24px;">
+          <a href="https://apps.shopify.com/where-is-my-order" class="install-btn" style="display: inline-block; width: auto; padding: 12px 32px;" data-cta-location="pricing">View on the Shopify App Store</a>
+          <p style="margin-top: 12px; font-size: 13px; color: #616161;">Free trial included &bull; Install in minutes &bull; Cancel anytime</p>
+        </div>
       </div>
-      <div class="footer-links">
-        <a href="https://apps.shopify.com/where-is-my-order" data-cta-location="footer">View on the Shopify App Store</a>
-        <a href="mailto:support@wismoapp.com">Email Us</a>
-        <a href="https://app.wismoapp.com/privacy">Privacy Policy</a>
-        <a href="https://app.wismoapp.com/terms">Terms</a>
+
+      <div class="content-divider"></div>
+
+      <div class="content-section">
+        <h2>Frequently asked questions</h2>
+
+        <div class="faq-item">
+          <div class="faq-question">Does Wismo replace my tracking/status page app?</div>
+          <div class="faq-answer">No—Wismo works alongside it and only emails customers during exceptions.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">When does Wismo email customers?</div>
+          <div class="faq-answer">Only when an exception is detected (no scan, stalled movement, carrier exception, etc.) and messaging is enabled.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Can I preview emails before enabling?</div>
+          <div class="faq-answer">Yes—preview and send a test email in the app.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Will it spam customers?</div>
+          <div class="faq-answer">No—hard capped to one message per exception per order.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">What carriers does it support?</div>
+          <div class="faq-answer">It uses Shopify fulfillment shipment status updates; if your setup doesn't provide shipment status, Wismo will tell you.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">How long does setup take?</div>
+          <div class="faq-answer">Minutes—install, review your impact analysis, test, then enable.</div>
+        </div>
       </div>
-      <div class="footer-disclaimer">
-        Wismo is not affiliated with Shopify Inc.
-      </div>
-    </div>
-  </footer>
+    </main>
+  </div>
 
   <!-- Lightbox -->
   <div class="lightbox" id="lightbox">
@@ -744,15 +661,37 @@
     <button class="lightbox-nav lightbox-prev" onclick="prevImage()">&lsaquo;</button>
     <button class="lightbox-nav lightbox-next" onclick="nextImage()">&rsaquo;</button>
     <img src="" alt="" id="lightbox-img">
-    <div class="lightbox-counter"><span id="current">1</span> / <span id="total">4</span></div>
+    <div class="lightbox-counter"><span id="current">1</span> / <span id="total">6</span></div>
   </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <strong>Wismo</strong>
+        <span>Reduce "Where is my order?" support tickets by reassuring customers during shipping silence.</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://app.wismoapp.com/privacy">Privacy Policy</a>
+        <a href="https://app.wismoapp.com/terms">Terms</a>
+        <a href="mailto:support@wismoapp.com">Email Us</a>
+      </div>
+    </div>
+    <div class="footer-inner">
+      <div class="footer-disclaimer">
+        Wismo is not affiliated with Shopify Inc.
+      </div>
+    </div>
+  </footer>
 
   <script>
     const images = [
       { src: 'images/analysis.png', alt: 'Wismo dashboard showing WISMO impact analysis' },
-      { src: 'images/recent_performance.png', alt: 'Wismo dashboard showing live impact and recent activity' },
-      { src: 'images/email_setup.png', alt: 'Wismo dashboard showing email preview and settings' },
-      { src: 'images/mobile_analysis.png', alt: 'Wismo mobile view showing WISMO impact analysis' }
+      { src: 'images/email_setup.png', alt: 'Wismo email preview and settings' },
+      { src: 'images/recent_performance.png', alt: 'Wismo live impact dashboard' },
+      { src: 'images/mobile_analysis.png', alt: 'Wismo mobile view showing impact analysis' },
+      { src: 'images/mobile_email_steup.png', alt: 'Wismo mobile email setup' },
+      { src: 'images/mobile_performance.png', alt: 'Wismo mobile dashboard' }
     ];
     let currentIndex = 0;
     const lightbox = document.getElementById('lightbox');
