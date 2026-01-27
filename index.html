@@ -321,6 +321,38 @@ f="XMLHttpRequest",g._w={},g._w[f]=m[f],g._w[s]=m[s],m[s]&&(m[s]=function(){retu
       margin-bottom: 24px;
     }
 
+    .mobile-stats-box {
+      background: #f6f6f7;
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-bottom: 16px;
+    }
+
+    .mobile-stats-header {
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 12px;
+    }
+
+    .mobile-stat {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: #616161;
+      margin-bottom: 8px;
+    }
+
+    .mobile-stat:last-child {
+      margin-bottom: 0;
+    }
+
+    .mobile-stat-icon {
+      font-size: 16px;
+      width: 20px;
+      text-align: center;
+    }
+
     /* FAQ */
     .faq-item {
       margin-bottom: 16px;
@@ -628,7 +660,26 @@ f="XMLHttpRequest",g._w={},g._w[f]=m[f],g._w[s]=m[s],m[s]&&(m[s]=function(){retu
         <h2 class="desktop-headline">Customers don't contact support because tracking updated.<br>They contact support because nothing is happening.</h2>
         <div class="mobile-headline">
           <h2>Stop "where is my order?" support tickets</h2>
-          <p class="mobile-subhead"><strong>Wismo shows you the impact it will have before you pay for the app, then prevents these support tickets automatically.</strong></p>
+          <p class="mobile-subhead"><strong>See how much support time and money you're losing on these tickets</strong></p>
+          <div class="mobile-stats-box">
+            <div class="mobile-stats-header">In the last 90 days:</div>
+            <div class="mobile-stat">
+              <span class="mobile-stat-icon">🟢</span>
+              <span><strong>314</strong> customers likely confused</span>
+            </div>
+            <div class="mobile-stat">
+              <span class="mobile-stat-icon">💬</span>
+              <span><strong>38</strong> repetitive support conversations</span>
+            </div>
+            <div class="mobile-stat">
+              <span class="mobile-stat-icon">🕐</span>
+              <span><strong>5–6 hours</strong> of wasted support</span>
+            </div>
+            <div class="mobile-stat">
+              <span class="mobile-stat-icon">💰</span>
+              <span><strong>$304</strong> in support cost</span>
+            </div>
+          </div>
           <a href="https://apps.shopify.com/wismo-3" class="install-btn" data-cta-location="mobile-hero">See the free savings analysis for your Shopify store</a>
         </div>
         <p>Wismo is a Shopify app that detects silent or confusing shipping moments and reassures customers automatically, so you get fewer "Where is my order?" tickets without hiring more support.</p>
