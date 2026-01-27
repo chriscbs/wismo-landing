@@ -303,6 +303,16 @@ f="XMLHttpRequest",g._w={},g._w[f]=m[f],g._w[s]=m[s],m[s]&&(m[s]=function(){retu
       margin: 24px 0;
     }
 
+    .mobile-headline {
+      display: none;
+    }
+
+    .mobile-subhead {
+      font-size: 15px;
+      color: #616161;
+      margin-bottom: 16px;
+    }
+
     /* FAQ */
     .faq-item {
       margin-bottom: 16px;
@@ -504,6 +514,14 @@ f="XMLHttpRequest",g._w={},g._w[f]=m[f],g._w[s]=m[s],m[s]&&(m[s]=function(){retu
         display: block !important;
         width: 100% !important;
       }
+
+      .desktop-headline {
+        display: none;
+      }
+
+      .mobile-headline {
+        display: block;
+      }
     }
 
     @media (max-width: 600px) {
@@ -599,7 +617,11 @@ f="XMLHttpRequest",g._w={},g._w[f]=m[f],g._w[s]=m[s],m[s]&&(m[s]=function(){retu
 
       <!-- Content -->
       <div class="content-section">
-        <h2>Customers don't contact support because tracking updated.<br>They contact support because nothing is happening.</h2>
+        <h2 class="desktop-headline">Customers don't contact support because tracking updated.<br>They contact support because nothing is happening.</h2>
+        <div class="mobile-headline">
+          <h2>Stop "where is my order?" support tickets</h2>
+          <p class="mobile-subhead">Wismo shows you the impact it will have before you pay for the app, then prevents these support tickets automatically.</p>
+        </div>
         <p>Wismo is a Shopify app that detects silent or confusing shipping moments and reassures customers automatically, so you get fewer "Where is my order?" tickets without hiring more support.</p>
         <ul>
           <li>Exception-only emails (no spam, one per exception per order)</li>
