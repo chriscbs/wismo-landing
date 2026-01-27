@@ -342,6 +342,10 @@ f="XMLHttpRequest",g._w={},g._w[f]=m[f],g._w[s]=m[s],m[s]&&(m[s]=function(){retu
       margin-bottom: 32px;
     }
 
+    .mobile-cta {
+      display: none;
+    }
+
     .mobile-stats-box {
       background: #f6f6f7;
       border-radius: 12px;
@@ -587,6 +591,16 @@ f="XMLHttpRequest",g._w={},g._w[f]=m[f],g._w[s]=m[s],m[s]&&(m[s]=function(){retu
         grid-template-columns: 1fr;
         gap: 8px;
       }
+
+      .stats-cta {
+        display: none;
+      }
+
+      .mobile-cta {
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 24px;
+      }
     }
 
     @media (max-width: 600px) {
@@ -706,8 +720,9 @@ f="XMLHttpRequest",g._w={},g._w[f]=m[f],g._w[s]=m[s],m[s]&&(m[s]=function(){retu
                 <span><strong>$304</strong> in support cost</span>
               </div>
             </div>
-            <a href="https://apps.shopify.com/wismo-3" class="stats-cta" data-cta-location="mobile-hero">See the free savings analysis for your Shopify store</a>
+            <a href="https://apps.shopify.com/wismo-3" class="stats-cta" data-cta-location="desktop-hero">See the free savings analysis for your Shopify store</a>
           </div>
+          <a href="https://apps.shopify.com/wismo-3" class="install-btn mobile-cta" data-cta-location="mobile-hero">See the free savings analysis for your Shopify store</a>
         </div>
         <p>Wismo is a Shopify app that detects silent or confusing shipping moments and reassures customers automatically, so you get fewer "Where is my order?" tickets without hiring more support.</p>
         <ul>
