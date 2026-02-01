@@ -346,18 +346,45 @@ f="XMLHttpRequest",g._w={},g._w[f]=m[f],g._w[s]=m[s],m[s]&&(m[s]=function(){retu
       display: none;
     }
 
+    .stats-own-numbers {
+      font-size: 13px;
+      color: #6d7175;
+      margin-top: 14px;
+      margin-bottom: 4px;
+      text-align: left;
+      font-style: italic;
+    }
+
+    .hero-trust-line {
+      font-size: 12px !important;
+      color: #b0b7be !important;
+      margin-top: 8px;
+      text-align: center;
+      width: 100%;
+    }
+
+    .mobile-trust-line {
+      display: none;
+    }
+
     .mobile-stats-box {
       background: #f6f6f7;
       border-radius: 12px;
-      padding: 20px 24px;
-      margin-bottom: 8px;
+      padding: 20px 24px 12px;
+      margin-bottom: 24px;
     }
 
     .mobile-stats-header {
       font-weight: 600;
       color: #1a1a1a;
-      margin-bottom: 16px;
+      margin-bottom: 2px;
       font-size: 15px;
+    }
+
+    .mobile-stats-subheader {
+      font-size: 13px;
+      color: #6d7175;
+      margin-bottom: 16px;
     }
 
     .mobile-stats-grid {
@@ -596,10 +623,18 @@ f="XMLHttpRequest",g._w={},g._w[f]=m[f],g._w[s]=m[s],m[s]&&(m[s]=function(){retu
         display: none;
       }
 
+      .mobile-stats-box > .hero-trust-line {
+        display: none;
+      }
+
+      .mobile-trust-line {
+        display: block;
+      }
+
       .mobile-cta {
         display: block;
         margin-top: 20px;
-        margin-bottom: 24px;
+        margin-bottom: 8px;
       }
     }
 
@@ -696,12 +731,12 @@ f="XMLHttpRequest",g._w={},g._w[f]=m[f],g._w[s]=m[s],m[s]&&(m[s]=function(){retu
 
       <!-- Content -->
       <div class="content-section">
-        <h2 class="desktop-headline">Customers don't contact support because tracking updated.<br>They contact support because nothing is happening.</h2>
+        <h2 class="desktop-headline">Stop <em>where is my order?</em> tickets</h2>
         <div class="mobile-headline">
-          <h2>Stop "where is my order?" support tickets</h2>
-          <p class="mobile-subhead"><strong>See how much support time and money you're losing on these tickets</strong></p>
+          <h2>Stop <em>where is my order?</em> tickets</h2>
           <div class="mobile-stats-box">
-            <div class="mobile-stats-header">In the last 90 days:</div>
+            <div class="mobile-stats-header">In the last 90 days</div>
+            <div class="mobile-stats-subheader">Example results from one Shopify store</div>
             <div class="mobile-stats-grid">
               <div class="mobile-stat">
                 <span class="mobile-stat-icon">🟢</span>
@@ -720,11 +755,13 @@ f="XMLHttpRequest",g._w={},g._w[f]=m[f],g._w[s]=m[s],m[s]&&(m[s]=function(){retu
                 <span><strong>$304</strong> in support cost</span>
               </div>
             </div>
-            <a href="https://apps.shopify.com/where-is-my-order" class="stats-cta" data-cta-location="desktop-hero">See the free savings analysis for your Shopify store</a>
+            <p class="stats-own-numbers">See your own store's numbers immediately after install — free.</p>
+            <a href="https://apps.shopify.com/where-is-my-order" class="stats-cta" data-cta-location="desktop-hero">See the free savings analysis</a>
+            <p class="hero-trust-line">Takes ~30 seconds · Built for Shopify · No commitment</p>
           </div>
-          <a href="https://apps.shopify.com/where-is-my-order" class="install-btn mobile-cta" data-cta-location="mobile-hero">See the free savings analysis for your Shopify store</a>
+          <a href="https://apps.shopify.com/where-is-my-order" class="install-btn mobile-cta" data-cta-location="mobile-hero">See the free savings analysis</a>
+          <p class="hero-trust-line mobile-trust-line">Takes ~30 seconds · Built for Shopify · No commitment</p>
         </div>
-        <p>Wismo is a Shopify app that detects silent or confusing shipping moments and reassures customers automatically, so you get fewer "Where is my order?" tickets without hiring more support.</p>
         <ul>
           <li>Exception-only emails (no spam, one per exception per order)</li>
           <li>Works alongside your existing tracking/status page app</li>
